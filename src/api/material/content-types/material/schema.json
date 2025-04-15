@@ -32,12 +32,6 @@
     },
     "subtotal": {
       "type": "decimal"
-    },
-    "entered_quantity": {
-      "type": "decimal"
-    },
-    "previous_entered": {
-      "type": "decimal"
     }
   }
 }

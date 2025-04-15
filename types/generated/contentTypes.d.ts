@@ -512,7 +512,6 @@ export interface ApiMaterialMaterial extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    entered_quantity: Schema.Attribute.Decimal;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -520,7 +519,6 @@ export interface ApiMaterialMaterial extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     material: Schema.Attribute.String;
-    previous_entered: Schema.Attribute.Decimal;
     price: Schema.Attribute.Decimal;
     project_item_modified: Schema.Attribute.Relation<
       'manyToOne',
@@ -735,6 +733,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   };
   attributes: {
     actualCompletionDate: Schema.Attribute.Date;
+    approved: Schema.Attribute.Media<'files' | 'images', true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
